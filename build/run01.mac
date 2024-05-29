@@ -1,0 +1,22 @@
+#
+# Macro file for "Hadr04.cc"
+#
+# neutron 14 MeV; all processes
+#
+#/control/verbose 2
+#/run/verbose 2
+#/tracking/verbose 2
+#
+/run/initialize
+#
+/process/list
+#
+/gun/particle neutron
+/gun/position 0. 0. 0. cm
+/gun/direction 0. 0. 1.0
+/gun/energy 14.0 MeV
+#
+/analysis/setFileName neutron
+/analysis/h1/set 1  100  0. 100. none	#nb colli >1eV
+/run/printProgress 1
+/run/beamOn 1000
